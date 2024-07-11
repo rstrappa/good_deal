@@ -1,0 +1,253 @@
+
+body {
+  box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.25);
+}
+
+
+color{
+    background-color:#1E1062
+}
+.dentro {
+    position: relative;
+    width: 100%;
+    float: left;
+    display: block;
+    background: white;
+}
+.letra {
+    color: rgb(82, 46, 117);
+    width: auto;
+    font-size: 3rem;
+    float: left;
+    z-index: 2;
+    position: relative;
+    font-family: "Avenir LT Std", Helvetica, sans-serif;
+    background: white;
+    padding: 1.5rem 1.5rem 1.5rem 0px;
+}
+
+.linea{
+    content: " ";
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    z-index: 0;
+    background: rgb(82, 46, 117);
+}
+.particle-heart {
+  --font-size: 3rem;
+  --active-color: #D81159;
+  --inactive-color: #9DA3A4;
+  --stroke-width: 1.75px;
+  --particle-diameter: 0.35rem;
+  position: relative;
+  width: var(--font-size);
+  height: var(--font-size);
+}
+
+.particle-heart > label {
+    position: absolute;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: calc(var(--font-size) + var(--stroke-width));
+    outline: none;
+    background: transparent;
+    font-size: var(--font-size);
+    color: var(--inactive-color);
+    cursor: pointer;
+    -webkit-text-stroke: var(--stroke-width) white;
+    transition: 0.75s cubic-bezier(0.25, 0.5, 0.9, 1);
+}
+.particle-heart > input {
+  display: none;
+}
+.particle-heart > label {
+  position: absolute;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: calc(var(--font-size) + var(--stroke-width));
+  outline: none;
+  background: transparent;
+  font-size: var(--font-size);
+  color: var(--inactive-color);
+  cursor: pointer;
+  -webkit-text-stroke: var(--stroke-width) white;
+  transition: 0.75s cubic-bezier(0.25, 0.5, 0.9, 1);
+}
+
+.particle-heart > input:active + label {
+  font-size: 1.5rem;
+  transition: 0.75s cubic-bezier(0.25, 1, 0.75, 0.5);
+  color: var(--active-color);
+}
+
+.particle-heart > input:checked + label {
+  color: var(--active-color);
+}
+
+.particle-heart > input:checked ~ .particle {
+  position: absolute;
+  background: var(--active-color);
+  width: 0;
+  height: 0;
+}
+.particle-heart > input:checked ~ div:nth-of-type(1) {
+  top: -5%;
+  left: 10%;
+  animation: sparkle1 1s;
+}
+.particle-heart > input:checked ~ div:nth-of-type(2) {
+  top: -5%;
+  right: 10%;
+  animation: sparkle2 1s;
+}
+.particle-heart > input:checked ~ div:nth-of-type(3) {
+  top: 40%;
+  left: -15%;
+  animation: sparkle3 1s;
+}
+.particle-heart > input:checked ~ div:nth-of-type(4) {
+  top: 40%;
+  right: -15%;
+  animation: sparkle4 1s;
+}
+.particle-heart > input:checked ~ div:nth-of-type(5) {
+  bottom: 10%;
+  left: 10%;
+  animation: sparkle5 1s;
+}
+.particle-heart > input:checked ~ div:nth-of-type(6) {
+  bottom: 10%;
+  right: 10%;
+  animation: sparkle6 1s;
+}
+
+@keyframes sparkle1 {
+  0% {
+    top: -5%;
+    left: 10%;
+    width: var(--particle-diameter);
+    height: var(--particle-diameter);
+    border-radius: calc(var(--particle-diameter) / 2);
+  }
+  10% {
+    top: -5%;
+    left: 10%;
+    width: var(--particle-diameter);
+    height: var(--particle-diameter);
+    border-radius: calc(var(--particle-diameter) / 2);
+  }
+  100% {
+    top: -15%;
+    left: 0;
+  }
+}
+@keyframes sparkle2 {
+  0% {
+    top: -5%;
+    right: 10%;
+    width: var(--particle-diameter);
+    height: var(--particle-diameter);
+    border-radius: calc(var(--particle-diameter) / 2);
+  }
+  10% {
+    top: -5%;
+    right: 10%;
+    width: var(--particle-diameter);
+    height: var(--particle-diameter);
+    border-radius: calc(var(--particle-diameter) / 2);
+  }
+  100% {
+    top: -15%;
+    right: 0;
+  }
+}
+@keyframes sparkle3 {
+  0% {
+    top: 40%;
+    left: -15%;
+    width: var(--particle-diameter);
+    height: var(--particle-diameter);
+    border-radius: calc(var(--particle-diameter) / 2);
+  }
+  10% {
+    top: 40%;
+    left: -15%;
+    width: var(--particle-diameter);
+    height: var(--particle-diameter);
+    border-radius: calc(var(--particle-diameter) / 2);
+  }
+  100% {
+    top: 40%;
+    left: -25%;
+  }
+}
+@keyframes sparkle4 {
+  0% {
+    top: 40%;
+    right: -15%;
+    width: var(--particle-diameter);
+    height: var(--particle-diameter);
+    border-radius: calc(var(--particle-diameter) / 2);
+  }
+  10% {
+    top: 40%;
+    right: -15%;
+    width: var(--particle-diameter);
+    height: var(--particle-diameter);
+    border-radius: calc(var(--particle-diameter) / 2);
+  }
+  100% {
+    top: 40%;
+    right: -25%;
+  }
+}
+@keyframes sparkle5 {
+  0% {
+    bottom: 10%;
+    left: 10%;
+    width: var(--particle-diameter);
+    height: var(--particle-diameter);
+    border-radius: calc(var(--particle-diameter) / 2);
+  }
+  10% {
+    bottom: 10%;
+    left: 10%;
+    width: var(--particle-diameter);
+    height: var(--particle-diameter);
+    border-radius: calc(var(--particle-diameter) / 2);
+  }
+  100% {
+    bottom: 0;
+    left: 0;
+  }
+}
+@keyframes sparkle6 {
+  0% {
+    bottom: 10%;
+    right: 10%;
+    width: var(--particle-diameter);
+    height: var(--particle-diameter);
+    border-radius: calc(var(--particle-diameter) / 2);
+  }
+  10% {
+    bottom: 10%;
+    right: 10%;
+    width: var(--particle-diameter);
+    height: var(--particle-diameter);
+    border-radius: calc(var(--particle-diameter) / 2);
+  }
+  100% {
+    bottom: 0;
+    right: 0;
+  }
